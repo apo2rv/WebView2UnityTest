@@ -14,7 +14,7 @@
     <p><a href="javascript:void(0)" onclick="Unity.call('anchor');">[Send Message!]</a></p>
     <form method="get" action="form">
       <input id="input1" type="text" value="hoge" name="msg"/>
-      <input type="submit" value="Send Message!" onclick="Unity.call('form?msg=' + ' ' + document.getElementById('input1').value); return false;"/>
+      <input type="submit" value="Send Message!" onclick="Unity.call('form?msg=' + document.getElementById('input1').value); return false;"/>
     </form>
   </body>
 </html>
@@ -30,9 +30,11 @@
     <h1>Hello Unity WebView</h1>
     <hr/>
     <form method="get" action="form">
-      <input id="input1" type="text" value="" name="msg"/>
-      <input id="input2" type="text" value="" name="msg"/>
-      <input type="submit" value="Send" onclick="Unity.call(document.getElementById('input1').value + ',' + document.getElementById('input2').value); return false;"/>
+      <label for="input1">Username:</label><br>
+      <input id="input1" type="text" value="" name="msg"/><br><br>
+      <label for="input2">Password:</label><br>
+      <input id="input2" type="text" value="" name="msg"/><br><br>
+      <input type="submit" value="Send" onclick="Unity.call(document.getElementById('input1').value + document.getElementById('input2').value); return false;"/>
     </form>
   </body>
 </html>
