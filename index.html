@@ -27,12 +27,12 @@
     <title>Unity WebView</title>
   </head>
   <body>
-    <h1>Hello Unity WebView 2</h1>
+    <h1>Hello Unity WebView</h1>
     <hr/>
     <form method="get" action="form">
       <input id="input1" type="text" value="" name="msg"/>
       <input id="input2" type="text" value="" name="msg"/>
-      <input type="submit" value="Send" onclick="Unity.call(document.getElementById('input1').value + ' ' + document.getElementById('input2').value); return false;"/>
+      <input type="submit" value="Send" onclick="Unity.call(document.getElementById('input1').value + ',' + document.getElementById('input2').value); return false;"/>
     </form>
   </body>
 </html>
